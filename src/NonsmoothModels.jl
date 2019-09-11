@@ -1,4 +1,4 @@
-module NonsmoothFunctions
+module NonsmoothModels
 
 export NesterovCR
 include("nesterovcr.jl")
