@@ -4,7 +4,6 @@ struct MaxEig{T <: Real}
     A0 :: Symmetric{T, Matrix{T}}
     # A :: Array{Symmetric{T, Matrix{T}},1}
     A :: Array{T,3}
-    H :: Matrix{T}
     MaxEig(A0, A) = new{eltype(A0)}(A0, cat(A..., dims=3), zeros(eltype(A0), length(A), length(A)))
 end
 

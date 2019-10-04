@@ -20,6 +20,7 @@ end
 
 function writegradient!(g, model :: EuclideanSum, signs, x)
     g_tmp = similar(g)
+    g .= 0
     for i = 1:length(model.structuremodels)
         writegradient!(g_tmp, model.structuremodels[i], x)
         g .+= signs[i]*g_tmp
@@ -29,6 +30,7 @@ end
 
 function writehessian!(H, model :: EuclideanSum, signs, x)
     H_tmp = similar(H)
+    H .= 0
     for i = 1:length(model.structuremodels)
         writehessian!(H_tmp, model.structuremodels[i], x)
         H .+= signs[i]*H_tmp
