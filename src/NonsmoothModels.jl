@@ -33,7 +33,18 @@ include("maxfunction.jl")
 export EuclideanSum
 include("euclideansum.jl")
 
+export LeastSquares
+include("leastsquares.jl")
+
+export LogisticLoss
+include("logistic.jl")
+
+export L1Norm
+include("l1norm.jl")
+
 export evaluate!, objective
 export writegradient!, writehessian!, writereducedhessian!
+export prox!
+export subgradientderivativesolve!
 
 end

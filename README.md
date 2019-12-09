@@ -14,6 +14,11 @@ Nonsmooth functions and optimization models implemented in Julia for research pu
 
 `model = Quartic(a::T, g::Vector{T}, H::Symmetric{T}, c::T)`
 
+### L1 Norm
+![equation](https://latex.codecogs.com/svg.latex?%5Clambda%20%5C%7Cx%5C%7C_1)
+
+`model = L1Norm(lambda::Real)`
+
 ### Mixed norm functions
 ![equation](https://latex.codecogs.com/svg.latex?%5Csqrt%7Bx%5ETAx%7D%20&plus;%20x%5ETBx)
 
@@ -23,6 +28,16 @@ Nonsmooth functions and optimization models implemented in Julia for research pu
 ![equation](https://latex.codecogs.com/svg.latex?%5Clambda_%7B%5Cmax%7D%5CBig%28A_0%20&plus;%20%5Csum_%7Bi%3D1%7D%5Emx_iA_i%5CBig%29)
 
 `model = MaxEig(A0::Symmetric{T}, A::Array{T,3})`
+
+### Least squares loss
+![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B1%7D%7B2%7D%20%5C%7CAx%20-%20b%5C%7C%5E2)
+
+`model = LeastSquares(A, b)`
+
+### Logistic loss
+![equation](https://latex.codecogs.com/svg.latex?%5Cfrac%7B1%7D%7BN%7D%20%5Csum_%7Bi%3D1%7D%5EN%20%5Clog%281%20&plus;%20e%5E%7B-y_i%20d_i%5ETx%7D%29)
+
+`model = LogisticLoss(D, y)`
 
 ### Nonsmooth Rosenbrock function
 ![equation](https://latex.codecogs.com/svg.latex?w%28x_1%20-%201%29%5E2%20&plus;%20%5Csum_%7Bi%3D1%7D%5E%7Bn-1%7D%5Cbig%7Cx_%7Bi&plus;1%7D%20-%20x_i%5E2%5Cbig%7C)
