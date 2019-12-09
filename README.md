@@ -22,7 +22,7 @@ Nonsmooth functions and optimization models implemented in Julia for research pu
 ### Maximum eigenvalue functions
 ![equation](https://latex.codecogs.com/svg.latex?%5Clambda_%7B%5Cmax%7D%5CBig%28A_0%20&plus;%20%5Csum_%7Bi%3D1%7D%5Emx_iA_i%5CBig%29)
 
-`model = MaxEig(A0::Symmetric{T}, A::Array{T,3}`
+`model = MaxEig(A0::Symmetric{T}, A::Array{T,3})`
 
 ### Nonsmooth Rosenbrock function
 ![equation](https://latex.codecogs.com/svg.latex?w%28x_1%20-%201%29%5E2%20&plus;%20%5Csum_%7Bi%3D1%7D%5E%7Bn-1%7D%5Cbig%7Cx_%7Bi&plus;1%7D%20-%20x_i%5E2%5Cbig%7C)
